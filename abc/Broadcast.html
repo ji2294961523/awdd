@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		img {
+			display: block;
+		}
+
+		.mask {
+			width: 680px;
+			height: 320px;
+			padding: 5px;
+			margin: 100px auto;
+			border: 1px solid #CCC;
+			background-color: #F2F2F2;
+			border-radius: 5px;
+		}
+
+		.mask ul {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.mask li {
+			position: absolute;
+			top: -325px;
+		}
+
+		.mask li:first-child {
+			top: 0;
+		}
+
+		.mask li:nth-child(1) {
+			animation: cycle 40s linear infinite;
+		}
+
+		.mask li:nth-child(2) {
+			animation: cycletwo 40s linear infinite;
+		}
+
+		.mask li:nth-child(3) {
+			animation: cyclethree 40s linear infinite;
+		}
+
+		.mask li:nth-child(4) {
+			animation: cyclefour 40s linear infinite;
+		}
+
+		.mask li:nth-child(5) {
+			animation: cyclefive 40s linear infinite;
+		}
+
+        	@keyframes cycle {
+			0%  {top: 0px;}
+			4%  {top: 0px;}
+			16% {top: 0px; opacity: 1; z-index: 0;} 
+			20% {top: 325px; opacity: 0; z-index: 0;}
+			21% {top: -325px; opacity: 0; z-index: -1;}
+			50% {top: -325px; opacity: 0; z-index: -1;}
+			92% {top: -325px; opacity: 0; z-index: 0;}
+			96% {top: -325px; opacity: 0;}
+			100%{top: 0px; opacity: 1;}
+		}
+
+		@keyframes cycletwo {
+			0%  {top: -325px; opacity: 0;}
+			16% {top: -325px; opacity: 0;}
+			20% {top: 0px; opacity: 1;}
+			24% {top: 0px; opacity: 1;} 
+			36% {top: 0px; opacity: 1; z-index: 0;} 
+			40% {top: 325px; opacity: 0; z-index: 0;}
+			41% {top: -325px; opacity: 0; z-index: -1;}  
+			100%{top: -325px; opacity: 0; z-index: -1;}
+		}
+
+		@keyframes cyclethree {
+			0%  {top: -325px; opacity: 0;}
+			36% {top: -325px; opacity: 0;}
+			40% {top: 0px; opacity: 1;}
+			44% {top: 0px; opacity: 1;} 
+			56% {top: 0px; opacity: 1; z-index: 0;} 
+			60% {top: 325px; opacity: 0; z-index: 0;} 
+			61% {top: -325px; opacity: 0; z-index: -1;}
+			100%{top: -325px; opacity: 0; z-index: -1;}
+		}
+
+		@keyframes cyclefour {
+			0%  {top: -325px; opacity: 0;}
+			56% {top: -325px; opacity: 0;}
+			60% {top: 0px; opacity: 1;}
+			64% {top: 0px; opacity: 1;}
+			76% {top: 0px; opacity: 1; z-index: 0;}
+			80% {top: 325px; opacity: 0; z-index: 0;}
+			81% {top: -325px; opacity: 0; z-index: -1;}
+			100%{top: -325px; opacity: 0; z-index: -1;}
+		}
+
+		@keyframes cyclefive {
+			0%  { top:-325px; opacity:0; }
+			76% { top:-325px; opacity:0; }
+			80% { top:0px; opacity:1; }
+			84% { top:0px; opacity:1; }
+			96% { top:0px; opacity:1; z-index:0; }
+			100%{ top:325px; opacity:0; z-index:0; }
+		}
+    </style>
+</head>
+<body>
+    <div class="content"><h1></h1></div>
+    <div class="container">
+        <div id="content-slider">
+            <div id="slider">
+                <div id="mask">
+                    <ul>
+                        <li id="first" class="firstanimation">
+                            <a href="#">
+                                <img src="http://img0.imgtn.bdimg.com/it/u=3695047774,657205206&fm=26&gp=0.jpg" alt="火影忍者">
+                            </a>
+                            <div class="tooltip">
+                                <h1>火影忍者</h1>
+                            </div>
+                        </li>
+                        <li id="second" class="secondanimation">
+                                <a href="#">
+                                    <img src="http://img5.imgtn.bdimg.com/it/u=3479911540,2062177973&fm=26&gp=0.jpg" alt="数码宝贝">
+                                </a>
+                                <div class="tooltip">
+                                    <h1>数码宝贝</h1>
+                                </div>
+                            </li>
+                            <li id="third" class="thirdanimation">
+                                    <a href="#">
+                                        <img src="http://img5.imgtn.bdimg.com/it/u=3585997636,4273461461&fm=11&gp=0.jpg" alt="海贼王">
+                                    </a>
+                                    <div class="tooltip">
+                                        <h1>海贼王</h1>
+                                    </div>
+                                </li>
+                                <li id="first" class="firstanimation">
+                                        <a href="#">
+                                            <img src="" alt="">
+                                        </a>
+                                        <div class="tooltip">
+                                            <h1></h1>
+                                        </div>
+                                    </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>
